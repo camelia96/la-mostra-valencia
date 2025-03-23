@@ -4,7 +4,7 @@ import './index.css'
 import { BrowserRouter, Route, Routes } from "react-router";
 import App from './App.tsx'
 import Film from './Film.tsx'
-import { Box, ChakraProvider, createSystem, defaultConfig, defineConfig, defineRecipe, defineTextStyles, Heading, HStack, Image, Text } from "@chakra-ui/react"
+import { Box, ChakraProvider, createSystem, defaultConfig, defineConfig, defineRecipe, Heading, HStack, Image } from "@chakra-ui/react"
 import Footer from './components/Footer.tsx'
 import Nav from './components/Nav.tsx'
 import LoopText from './components/LoopText.tsx'
@@ -39,16 +39,6 @@ const buttonRecipe = defineRecipe({
 
 })
 
-
-const linkRecipe = defineRecipe({
-  base: {
-    _hover: {
-      color: "brand.white",
-    },
-  },
-
-
-})
 
 const headingRecipe = defineRecipe({
   variants: {
