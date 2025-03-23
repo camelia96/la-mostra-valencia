@@ -155,8 +155,8 @@ let settings = {
 };
 function Film() {
     // Get id from URL
-    const { id } = useParams();
-
+    const {id, url} = useParams();
+console.log(url)
     const [error, setError] = useState({ state: false, message: "" });
     const [film, setFilm] = useState<FilmData>();
 
