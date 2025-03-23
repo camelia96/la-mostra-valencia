@@ -11,8 +11,8 @@ import LoopText from './components/LoopText.tsx'
 import About from './About.tsx';
 import { EXTRALARGE, LARGE, MEDIUM, SMALL } from './helpers/constants.ts';
 import Sections from './Sections.tsx';
-import { Analytics } from "@vercel/analytics/react"
-
+/* import { Analytics } from "@vercel/analytics/react"
+ */
 
 // Theming
 const buttonRecipe = defineRecipe({
@@ -144,14 +144,14 @@ createRoot(document.getElementById('root')!).render(
             </HStack>} />
         </Box>
         <Nav responsive={true} />
-        <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/film/:id?" element={<Film />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/sections/:id?" element={<Sections />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="/film/:id?" element={<Film />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/sections/:id?" element={<Sections />} />
+          </Routes>
         <Footer /></BrowserRouter>
-        <Analytics/>
-    </ChakraProvider>
+{/*       <Analytics />
+ */}    </ChakraProvider>
   </StrictMode>,
 )
