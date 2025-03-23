@@ -1,10 +1,8 @@
 import { Box, Button, Grid, GridItem, Heading, HStack, Image, Span, Text } from '@chakra-ui/react'
-import { gsap } from "gsap";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { AdvancedMarker, APIProvider, InfoWindow, Map, Marker, Pin, useAdvancedMarkerRef } from '@vis.gl/react-google-maps';
-import { useCallback, useState } from 'react';
+import {  APIProvider,  Map, Marker } from '@vis.gl/react-google-maps';
 import { MEDIUM, SMALL } from './helpers/constants';
 import { Link } from 'react-router';
 import { Jury, Location } from './interfaces/interfaces';

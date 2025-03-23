@@ -1,10 +1,9 @@
 import './App.css'
-import { Box, Button, Grid, GridItem, Heading, HStack, Image, Link, Text, useEditable } from '@chakra-ui/react'
-import { gsap } from "gsap";
+import { Box, Button,  Heading, HStack, Image, Link, Text } from '@chakra-ui/react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import LoopText from './components/LoopText';
 import { useLocation } from 'react-router';
 import { New } from './interfaces/interfaces';
