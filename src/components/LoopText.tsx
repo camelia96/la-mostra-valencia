@@ -1,4 +1,4 @@
-import { Box, Heading, Image, Link, Text } from "@chakra-ui/react";
+import { Box} from "@chakra-ui/react";
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
 import horizontalLoop from "@/helpers/horizontalLoop";
@@ -14,7 +14,7 @@ export default function LoopText({ repetitions, element }: { repetitions: number
 
         const scrollingText = gsap.utils.toArray('.loop-element') as Element[] as HTMLElement[];
 
-        const tl = horizontalLoop(scrollingText, {
+        horizontalLoop(scrollingText, {
             repeat: -1,
             paused: false,
             speed: 0.3,

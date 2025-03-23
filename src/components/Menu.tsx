@@ -1,5 +1,5 @@
 import { MenuProps } from "@/interfaces/interfaces";
-import { Box, Text, MenuContent, MenuItem, MenuItemCommand, MenuPositioner, MenuRoot, MenuTrigger, Portal, Button, MenuItemGroup, MenuSeparator, Link as LinkChakra } from "@chakra-ui/react";
+import { Box, Text, MenuContent, MenuItem, MenuPositioner, MenuRoot, MenuTrigger, Portal, Button, MenuItemGroup, MenuSeparator, Link as LinkChakra } from "@chakra-ui/react";
 import { Link } from "react-router";
 
 

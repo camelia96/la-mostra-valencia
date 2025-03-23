@@ -1,4 +1,4 @@
-import { Box, Button, HStack, Image, Link, MenuContent, MenuItem, MenuItemCommand, MenuPositioner, MenuRoot, MenuTrigger, Portal } from "@chakra-ui/react";
+import { Box, Button, Image, Link } from "@chakra-ui/react";
 import Menu from "./Menu";
 
 
