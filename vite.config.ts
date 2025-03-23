@@ -6,6 +6,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(), tsconfigPaths()],
+  base: '/',
   define: {
     "process.env.VITE_REACT_APP_MAPS_API_KEY": JSON.stringify(process.env.VITE_REACT_APP_MAPS_API_KEY),  }
 });
