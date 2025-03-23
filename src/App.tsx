@@ -1,5 +1,5 @@
 import './App.css'
-import { Box, Button,  Heading, HStack, Image, Link, Text } from '@chakra-ui/react'
+import { Box, Button,  Heading, HStack, Image, Text } from '@chakra-ui/react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import LoopText from './components/LoopText';
 import { useLocation } from 'react-router';
 import { New } from './interfaces/interfaces';
+import {Link} from "react-router"
 
 
 var settings = {
@@ -118,7 +119,7 @@ function App() {
           <Box display={"flex"} flexDir={{ base: "column", sm: "row" }} w={{ "base": "100%" }}>
             <Box w={{ "base": "100%", sm: "6/12" }} bgColor={"brand.blue"}>
               <Heading p={"10"} size={"3xl"}>
-                <Link color={"brand.gray"}>Sección <br />Oficial</Link>
+                <Link to={"/sections/#oficial"} color={"brand.gray"}>Sección <br />Oficial</Link>
               </Heading>
             </Box>
             <Image src="/img/films/Backstage-1.png" w={{ "base": "100%", sm: "6/12" }} >
@@ -129,7 +130,7 @@ function App() {
           <Box display={"flex"} flexDir={{ base: "column", sm: "row-reverse", md: "row" }} w={{ "base": "100%" }}>
             <Box w={{ "base": "100%", sm: "6/12" }} bgColor={"brand.red"}>
               <Heading p={"10"} size={"3xl"}>
-                <Link color={"brand.gray"}>Sección <br />Informativa</Link>
+                <Link to={"/sections/#informativa"}  color={"brand.gray"}>Sección <br />Informativa</Link>
               </Heading>
             </Box>
             <Image src="/img/films/Avant-Drag-1.jpg" w={{ "base": "100%", sm: "6/12" }} >
@@ -147,7 +148,7 @@ function App() {
             </Image>
             <Box w={{ "base": "100%", sm: "6/12" }} bgColor={"brand.pink"}>
               <Heading p={"10"} size={"3xl"}>
-                <Link>Sesiones <br />Especiales</Link>
+                <Link to={"/sections/#especial"} >Sesiones <br />Especiales</Link>
               </Heading>
             </Box>
           </Box>
@@ -158,7 +159,7 @@ function App() {
             </Image>
             <Box w={{ "base": "100%", sm: "6/12" }} bgColor={"brand.yellow"}>
               <Heading p={"10"} size={"3xl"}>
-                <Link whiteSpace={"pre"}>Palmera<br />
+                <Link to={"/sections/#palmera"} >Palmera<br />
                   de<br />
                   Honor:<br />
                   Isaki<br />
@@ -183,7 +184,7 @@ function App() {
               <Image w={"1.8rem"} src="/img/elements/element-palm-red.png" />
               <Heading as={"h2"} fontSize={{ base: "5xl", lg: "6xl" }} size={"6xl"}>Noticias</Heading>
             </HStack>
-            <Box textAlign={{ base: "center", md: "left" }} w={{ base: "100%", md: "2/12", lg: "2/12" }}><Link href="https://lamostradevalencia.com/noticias/" target='blank'><Button>Más noticias</Button></Link></Box>
+            <Box textAlign={{ base: "center", md: "left" }} w={{ base: "100%", md: "2/12", lg: "2/12" }}><Link to="https://lamostradevalencia.com/noticias/" target='blank'><Button>Más noticias</Button></Link></Box>
             <Text textAlign={{ base: "center", md: "left" }} w={{ base: "100%", md: "5/12", lg: "6/12" }} fontFamily={"EB Garamond"} letterSpacing={"serif"}>Todas aquellas instituciones y/o entidades que, de manera directa o  indirecta, organizan, participan, colaboran o brindan su apoyo para la  realización, promoción y éxito de nuestro festival.</Text>
           </Box>
         </Box>
@@ -197,7 +198,7 @@ function App() {
                 <Heading as={"h4"} size={"sm"} textAlign={{ base: "center", sm: "left" }}>{item.title}</Heading>
                 <Text w={{ base: "100%", sm: "9/12" }} fontFamily={"EB Garamond"} textAlign={{ base: "center", sm: "left" }} letterSpacing={"serif"}>{item.description}</Text>
               </Box>
-              <Link href={item.link} target="blank"><Button w={{ base: "" }}>Leer más</Button></Link>
+              <Link to={item.link} target="blank"><Button w={{ base: "" }}>Leer más</Button></Link>
             </Box>
           ))}
 
@@ -210,7 +211,7 @@ function App() {
         <LoopText repetitions={5} element={
           <Box display={"flex"} gap={"5"} py={"3rem"}>
             <Heading as={"h3"} fontSize={"3xl"} fontWeight={"light"} fontStyle={"italic"} display={"flex"}>
-              <Link>About La Mostra de València / </Link>
+              <Link to={"/about"}>About La Mostra de València / </Link>
             </Heading>
           </Box>
         } />

@@ -66,6 +66,7 @@ export interface New {
 
 export interface Section {
   id: number,
+  idSection: string,
   title: string;
   films:
   {

@@ -6,6 +6,7 @@ import { Link } from "react-router";
 const sections: Section[] = [
   {
     id: 1,
+    idSection: "oficial",
     title: "Sección oficial",
     films: [
       {
@@ -27,11 +28,13 @@ const sections: Section[] = [
   },
   {
     id: 2,
+    idSection: "informativa",
     title: "Sección informativa",
     films: [],
   },
   {
     id: 3,
+    idSection: "especial",
     title: "Sesiones especiales",
     films: [{
       name: "When the phone rang",
@@ -61,6 +64,7 @@ const sections: Section[] = [
   },
   {
     id: 4,
+    idSection: "palmera",
     title: "Palmera de Honor: Isaki Lacuesta",
     films: [],
   },
@@ -71,7 +75,7 @@ export default function Sections() {
   return (
     <Box>
       {sections.map((section) => (
-        <Box key={section.id} w={{ base: "100%" }} display={"flex"} flexDir={"column"} justifyContent={"center"} alignItems={"center"}>
+        <Box key={section.id} id={section.idSection} w={{ base: "100%" }} display={"flex"} flexDir={"column"} justifyContent={"center"} alignItems={"center"}>
           <Heading bgColor={"brand.pink"} w={"100%"} p={"1.55rem"} size={"6xl"} textAlign={"center"} fontSize={{ base: "4xl" }}>{section.title}</Heading>
           <Box w={{ base: "100%", sm: "10/12" }} >
             <Box gapX={"3rem"} my={"2rem"}>
