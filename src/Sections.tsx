@@ -1,5 +1,6 @@
-import { Box, Button, Grid, GridItem, Heading, Link, Text } from "@chakra-ui/react";
+import { Box, Button, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 import { Section } from "./interfaces/interfaces";
+import { Link } from "react-router";
 
 
 const sections: Section[] = [
@@ -79,7 +80,7 @@ export default function Sections() {
                 (<GridItem key={index} justifyContent={"center"} alignItems={"center"} display={"flex"} gap={"3"} flexDir={"column"} w={{ base: "100%" }} my={"2rem"}>
                   <Box bgImage={`url(/img/films/${film.image})`} bgSize={"cover"} bgPos={"center"} w={"100%"} h={"35vh"}></Box>
                   <Heading fontFamily={"EB Garamond"} fontSize={"xl"} fontWeight={"regular"} fontStyle={"italic"}>{film.name}</Heading>
-                  <Link href={`/film/${film.id}`} ><Button fontSize={"xs"}>Más info</Button></Link>
+                  <Link to={`/film/${film.id}`} ><Button fontSize={"xs"}>Más info</Button></Link>
                 </GridItem>)
                 )}
               </Grid>)
