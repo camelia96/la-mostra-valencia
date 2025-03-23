@@ -11,8 +11,14 @@ import LoopText from './components/LoopText.tsx'
 import About from './About.tsx';
 import { EXTRALARGE, LARGE, MEDIUM, SMALL } from './helpers/constants.ts';
 import Sections from './Sections.tsx';
+import { initGA, trackPageView } from './analytics/analytics.ts';
 
+// Analytics
+initGA();
 
+trackPageView(window.location.pathname);
+
+// Theming
 const buttonRecipe = defineRecipe({
   base: {
     fontWeight: "regular",
