@@ -146,7 +146,7 @@ createRoot(document.getElementById('root')!).render(
         <Nav responsive={true} />
         <Routes>
           <Route path="/" element={<App />} />
-          <Route path="/film/" element={<Film />} />
+          <Route path="/film/:id?" element={<Film />} />
           <Route path="/about" element={<About />} />
           <Route path="/sections/:id?" element={<Sections />} />
         </Routes>
