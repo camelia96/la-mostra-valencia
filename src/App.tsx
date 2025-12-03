@@ -56,6 +56,7 @@ const news: New[] = [
     link: "https://lamostradevalencia.com/les-enfants-rouges-una-exploracion-del-duelo-infantil-en-las-montanas-de-tunez/"
   }
 ]
+
 function App() {
 
   const location = useLocation();
@@ -71,6 +72,7 @@ function App() {
 
   return (
     <Box overflowX={"hidden"}>
+
       {/* HERO */}
       <Box >
         <Slider {...settings} className='slider' >
